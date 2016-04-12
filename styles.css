@@ -64,11 +64,7 @@ p, input {
 
 
 #searchresults{
-    display:inline-block;
-    float:left;
     height:100%;
-    width:auto;
-    width:calc(100%-275px);
     background:grey;
     overflow:auto;
 }
