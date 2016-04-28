@@ -10,7 +10,7 @@ p, h1, h2, h3, a, ul, li{
 
 }
 
-p, input {
+p, input, label {
     color: black;
     text-align: left;
     font-size: 12pt;
@@ -66,6 +66,7 @@ p, input {
 #searchresults{
     height:100%;
     background:grey;
+   
 }
 
 #title{
@@ -74,6 +75,19 @@ p, input {
     display:inline;
     float:left;
     color:grey;   
+}
+
+#reciperesult{
+    
+    margin:20px;
+    background: #999999;
+    border-radius: 25px;
+    padding:15px;
+    margin:10px;
+}
+
+img{
+ padding-left: 30px;    
 }
 
 #columns{
