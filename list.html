@@ -5,43 +5,284 @@
         <meta charset="UTF-8">
 
         <title>
-            Shopping List
+            Recipe Planner
         </title>
 
         <!-- import CSS and Google Fonts -->
 
-        <style>
-            @import url(styles.css);
-            @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300italic);
-        </style>
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300italic">
+        <link href='https://fonts.googleapis.com/css?family=Courgette' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="css/boostrap-theme.css">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+        <!--Responsive meta viewport tag-->
+        <meta name="viewport" content="width=device-width">
+
     </head>
     <body>
-        <div id="logo"><h1>Shopping List</h1></div>
 
-        <div id="navbar"> 
-            <a href="index.html">Home </a> <span> | </span>
-            <a href="list.html">List </a> <span> | </span>
-            <a href="planning.html">Planning  </a>
+        <!--MJ NAVIGATION-->
+
+        <nav class="nav navbar-custom navbar-static-top">
+            <div class="container">
+                <h1 class="branding-font navbar-brand"><a href="index.html">Recipe Planner</a></h1>
+
+                <button class="navbar-toggle menu-icon" data-toggle ="collapse" data-target =".navMenu">
+                    <span class="glyphicon glyphicon-menu-hamburger"></span>
+                </button>
+
+                <div class="collapse navbar-collapse navMenu"> 
+                    <ul class="nav navbar-nav navbar-text navbar-right">
+                        <!--<li><a href="#index">Home</a></li>-->
+                        <li><a href="list.html">My List</a></li>
+                        <li><a href="#plan">Plan</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#login-modal">Log In</a></li>
+                    </ul>    
+                </div>
+            </div>
+        </nav>
+
+        <!--MJ LOGIN MODAL-->
+        <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog">
+                <div class="loginmodal-container">
+                    <h1>Log In</h1><br>
+                    <form>                                    <!--Controller needs to specify an action-->
+                        <input type="text" name="user" placeholder="Username">
+                        <input type="password" name="pass" placeholder="Password">
+                        <input type="submit" name="login" class="text-center login loginmodal-submit" value="Login">
+                    </form>
+                    
+                    <div class="login-help text-center">
+                        <a href="register.html">Register</a> - <a href="#">Forgot Password</a>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div id="title"><h1>My Shopping List</h1></div>
-        
-        <div id="columns">
-            <ul class="checkbox-grid">
-                <li><input type="checkbox" name="text1" value="value1" /><labe for="text1">Text 1</label></li>
-                <li><input type="checkbox" name="text2" value="value2" /><label for="text2">Text 2</label></li>
-                <li><input type="checkbox" name="text3" value="value3" /><label for="text3">Text 3</label></li>
-                <li><input type="checkbox" name="text4" value="value4" /><label for="text4">Text 4</label></li>
-                <li><input type="checkbox" name="text5" value="value5" /><label for="text5">Text 5</label></li>
-                <li><input type="checkbox" name="text6" value="value6" /><label for="text6">Text 6</label></li>
-                <li><input type="checkbox" name="text7" value="value7" /><label for="text7">Text 7</label></li>
-                <li><input type="checkbox" name="text8" value="value8" /><label for="text8">Text 8</label></li>
-            </ul>
-        
+        <!--PAGE CONTENT-->
+
+        <div class="profile-jumbotron">
+            <div class="container text-center">
+                <img class="img-circle responsive-img profile-picture" src="/img/mock-pro-pic.jpg">
+                <h1>Placeholder Smith</h1>
+            </div>
         </div>
 
+        <div class="profile-content text-center">
 
-        <div style="clear:both;"></div>
+            <div class="profile-nav">
+                <ul class="nav" id="myTab">
+                    <li class="active profile-tab"><a href="#my-recipes" data-toggle="tab">My Recipes</a></li>
+                    <li><a class="profile-tab" href="#favorite-recipes" data-toggle="tab">Favorite Recipes</a></li>
+                </ul>
+            </div>
+
+            <div class="tab-content my-tab">
+                <div class="tab-pane active" id="my-recipes">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <!--My recipes tab-->
+
+
+                            <!--Each element is an article-->
+                            <article class="col-sm-6 col-md-4">
+                                <a href="#">
+                                    <div class="row">
+                                        <div class="boxTile">
+
+                                            <div class="square">
+                                                <img src="img/apple-pie.jpg">
+                                            </div>
+
+                                            <div class="square info easeAni">
+                                                <div class="text">
+                                                        <p>Apple Pie</p>
+                                                <h2>A sweet, delicious homemade American classic dessert.</h2>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </a>
+                            </article>
+
+                            <!--Each element is an article-->
+                            <article class="col-sm-6 col-md-4">
+                                <a href="#">
+                                    <div class="row">
+                                        <div class="boxTile">
+
+                                            <div class="square">
+                                                <img src="img/steak-and-eggs.jpg">
+                                            </div>
+
+                                            <div class="square info easeAni">
+                                                <div class="text">
+                                                        <p>Steak and Eggs</p>
+                                                <h2>A savory mix of breakfast and dinner to start your day.</h2>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </a>
+                            </article>
+
+                            <!--Each element is an article-->
+                            <article class="col-sm-6 col-md-4">
+                                <a href="#">
+                                    <div class="row">
+                                        <div class="boxTile">
+
+                                            <div class="square">
+                                                <img src="img/chicken-cacciatore.jpg">
+                                            </div>
+
+                                            <div class="square info easeAni">
+                                                <div class="text">
+                                                        <p>Chicken Cacciatore</p>
+                                                <h2>A hard to spell staple of the Italian-American household.</h2>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </a>
+                            </article>
+
+                            <!--Each element is an article-->
+                            <article class="col-sm-6 col-md-4">
+                                <a href="#">
+                                    <div class="row">
+                                        <div class="boxTile">
+
+                                            <div class="square">
+                                                <img src="img/spaghetti.jpg">
+                                            </div>
+
+                                            <div class="square info easeAni">
+                                                <div class="text">
+                                                        <p>Spaghetti</p>
+                                                <h2>A less hard to spell staple of the Italian-American household.</h2>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </a>
+                            </article>
+
+                            <!--Each element is an article-->
+                            <article class="col-sm-6 col-md-4">
+                                <a href="#">
+                                    <div class="row">
+                                        <div class="boxTile">
+
+                                            <div class="square">
+                                                <img src="img/pork-roast.jpg">
+                                            </div>
+
+                                            <div class="square info easeAni">
+                                                <div class="text">
+                                                        <p>Pork Roast</p>
+                                                <h2>A new use for your old pet pig.</h2>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </a>
+                            </article>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="favorite-recipes">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <!--Favorite recipes tab-->
+
+
+                            <!--Each element is an article-->
+                            <article class="col-sm-6 col-md-4">
+                                <a href="#">
+                                    <div class="row">
+                                        <div class="boxTile">
+
+                                            <div class="square">
+                                                <img src="img/peanut-butter-cheesecake.jpg">
+                                            </div>
+
+                                            <div class="square info easeAni">
+                                                <div class="text">
+                                                        <p>Peanut Butter Cheesecake</p>
+                                                <h2>Why spend $50 at the Cheescake Factory?</h2>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </a>
+                            </article>
+
+                            <!--Each element is an article-->
+                            <article class="col-sm-6 col-md-4">
+                                <a href="#">
+                                    <div class="row">
+                                        <div class="boxTile">
+
+                                            <div class="square">
+                                                <img src="img/shamrock-cupcakes.jpg">
+                                            </div>
+
+                                            <div class="square info easeAni">
+                                                <div class="text">
+                                                        <p>Shamrock Cupcakes</p>
+                                                <h2>A perfect dessert for the day everyone has x% of Irish in them.</h2>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </a>
+                            </article>
+
+
+                            <!--Each element is an article-->
+                            <article class="col-sm-6 col-md-4">
+                                <a href="#">
+                                    <div class="row">
+                                        <div class="boxTile">
+
+                                            <div class="square">
+                                                <img src="img/spaghetti.jpg">
+                                            </div>
+
+                                            <div class="square info easeAni">
+                                                <div class="text">
+                                                        <p>Spaghetti Squash</p>
+                                                <h2>A harder to spell vegetable version of the easy to spell staple of the Italian-American household.</h2>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </a>
+                            </article>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+        <script src="js/bootstrap.js"></script>
 
     </body>
 </html>
